@@ -43,13 +43,13 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
-    // Attach the submitPostcode function to the form submit event
+    // Attach the submitPostcode function to the form submit 
     postcodeForm.addEventListener('submit', function (event) {
         event.preventDefault();
         submitPostcode();
     });
 
-    // Attach the submitName function to the form submit event
+    // Attach the submitName function to the form submit 
     nameForm.addEventListener('submit', function (event) {
         event.preventDefault();
         submitName();
