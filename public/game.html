@@ -1,0 +1,28 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeting Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <h1>Budgeting Game</h1>
+        <div id="money-display">
+            <p>Money: $<span id="current-money">1000</span></p>
+            <p id="current-month">Month: 1</p>
+        </div>
+        <button id="start-button" onclick="startGame()">Start Game</button>
+        <div id="event-container"></div>
+        <div id="options-container"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

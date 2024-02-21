@@ -1,0 +1,140 @@
+<!-- resource.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="pictures/Logo.png" alt="Logo" class="logo">
+        <div class="dropdown">
+            <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="learn-more.html">Learn more</a>
+                <a href="about-us.html">About us</a>
+                <a href="act.html">Act Now</a>
+                <a href="resource.html">Further Resources</a>
+            </div>
+        </div>
+    </header>
+
+    <center><h2>Whether you're seeking immediate help or looking for opportunities to improve your situation, our curated list of resources aims to guide you towards the assistance you need
+        Or, <a href="https://askizzy.org.au/">Ask Izzy</a></h2></center>
+    <center><a href="interactive.html">Interactive game</a></center>
+
+    <div class="container-res">
+        <div class="box-res">
+            <h2>Financial Support</h2>
+            <button onclick="openPopup('financial')">More</button>
+        </div>
+
+        <div class="box-res">
+            <h2>Health and Well-being</h2>
+            <button onclick="openPopup('health')">More</button>
+        </div>
+
+        <div class="box-res">
+            <h2>Housing Assistance</h2>
+            <button onclick="openPopup('housing')">More</button>
+        </div>
+
+        <div class="box-res">
+            <h2>Immediate Support</h2>
+            <button onclick="openPopup('immediate')">More</button>
+        </div>
+    </div>
+
+    <!-- Pop-up for Financial Support -->
+    <div id="financialPopup" class="popup-res">
+        <div class="popup-content-res">
+            <span class="close-btn" onclick="closePopup('financial')">&times;</span>
+            <h2>Financial Support Resources</h2>
+            <ul>
+                <p>Government Payments and Services: </p>
+                <li><a href="https://ndh.org.au/">National Debt Helpline - 1800 007 007</a></li>
+                <li><a href="https://financialrights.org.au/getting-help/mob-strong-debt-help/">Mob Strong Debt Helpline - 1800 808 488</a></li>
+                <li><a href="https://wayforward.org.au/">Way Forward</a></li>
+                <li><a href="https://my.gov.au/en/services/work/experiencing-financial-hardship/immediate-help-if-you-re-in-financial-hardship/financial-support-if-you-re-in-financial-hardship">Services Australia - 132 850</a></li>
+                <li><a href="https://www.salvationarmy.org.au/need-help/financial-assistance/">Salvation Army - 13 72 58</a></li>
+                <li><a href="https://www.missionaustralia.com.au/servicedirectory/190-financial-support">Mission Australia</a></li>
+                <li><a href="https://serviceproviders.dss.gov.au/#">DSS Grants Service Directory</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Pop-up for Health and Well-being -->
+    <div id="healthPopup" class="popup-res">
+        <div class="popup-content-res">
+            <span class="close-btn" onclick="closePopup('health')">&times;</span>
+            <h2>Health and Well-being Resources</h2>
+            <ul>
+                <li><a href="https://ruah.org.au/services-support/mental-health-and-wellness/mental-health-resources/">Ruah Mental Health and Wellness</a></li>
+                <li><a href="https://yorgum.org.au/services/">Yorgum Healing Services - 1800 469 371</a></li>
+                <li><a href="https://hopecommunityservices.org.au/service/mental-health/">Hope Community Services</a></li>
+                <li><a href="https://www.dental.wa.gov.au/">Government Dental Health Services</a></li>
+                <li><a href="https://cwsw.org.au/womens-health-services-in-wa/">Women's Community Health Services</a></li>
+                <li><a href="https://www.dyhs.org.au/">Derbal Yerrigan</a></li>
+                <li><a href="https://www.360.org.au/street-doctor/">Street Doctor - (08) 9376 9200 </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Pop-up for Housing Assistance -->
+    <div id="housingPopup" class="popup-res">
+        <div class="popup-content-res">
+            <span class="close-btn" onclick="closePopup('housing')">&times;</span>
+            <h2>>Housing Assistance Resources</h2>
+            <ul>
+                <li><a href="https://www.onelink.org.au/">ACT -  OneLink, 1800 176 468 </a></li>
+                <li><a href="https://www.facs.nsw.gov.au/housing">NSW - Link2Home, 1800 152 152</a></li>
+                <li><a href="https://www.shelterme.org.au/">NT - ShelterMe</a></li>
+                <li><a href="https://www.qld.gov.au/housing/emergency-temporary-accommodation/homeless-persons-information-qld">QLD - Homeless Hotline, 1800 474 753</a></li>
+                <li><a href="https://www.sa.gov.au/topics/housing/emergency-shelter-and-homelessness/accessing-services">SA - Homelessness Gateway, 1800 003 308</a></li>
+                <li><a href="https://www.homestasmania.com.au/housing-and-homelessness/housing-connect#:~:text=Call%20Housing%20Connect%2C%2024%20hours,9%20am%20and%205%20pm.">TAS - Homes Tasmania, 1800 800 588</a></li>
+                <li><a href="https://www.housing.vic.gov.au/crisis-emergency-accommodation">VIC - HousingVic, 1800 825 955</a></li>
+                <li><a href="https://www.entrypointperth.com.au/">WA - Entrypoint Perth, 1800 124 684</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Pop-up for Immediate Support -->
+    <div id="immediatePopup" class="popup-res">
+        <div class="popup-content-res">
+            <span class="close-btn" onclick="closePopup('immediate')">&times;</span>
+            <h2>Immediate Support Resources</h2>
+            <ul>
+                <li><a href="https://www.lifeline.org.au/">Lifeline</a></li>
+                <li><a href="https://www.beyondblue.org.au/">BeyondBlue - 1300 22 46 36</a></li>
+                <li><a href="https://www.1800respect.org.au/">1800RESPECT - 1800 737 732</a></li>
+                <li><a href="https://www.fds.org.au/">Family Drug Support Australia - 1300 368 166 </a></li>
+                <li><a href="https://www.gamblinghelponline.org.au/">Gambling Help Online - 1800 858 858</a></li>
+                <li><p>WA Women’s Domestic Violence Helpline - 1800 007 339</p></li>
+                <li><p>Crisis Care housing and homelessness - 1800 199 008 </p></li>
+                <li><p>Mensline - 1300 78 99 76</p></li>
+            </ul>
+        </div>
+    </div>
+
+    <center><h2>We're here to support you, every step of the way.</h2></center>
+
+    <script src="script.js"></script>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="pictures/facebook.png" alt="Facebook"></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src="pictures/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="pictures/instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="share-option">
+            <button onclick="sharePage()">Share</button>
+        </div>
+    </footer>
+</body>
+
+</html>

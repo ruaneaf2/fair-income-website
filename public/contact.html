@@ -1,0 +1,113 @@
+<!-- contact.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Fair Income</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="pictures/Logo.png" alt="Logo" class="logo">
+        <div class="dropdown">
+            <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="learn-more.html">Learn more</a>
+                <a href="about-us.html">About us</a>
+                <a href="act.html">Act Now</a>
+                <a href="resource.html">Further Resources</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-contact">
+        <div class="form-container-contact">
+            <div class="steps-container-contact">
+                <div class="step-contact">
+                    <h2>Step 1: Enter Postcode</h2>
+                    <form id="postcodeForm">
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" id="postcode" name="postcode" required>
+                        <button type="button" onclick="submitPostcode()">Next</button>
+                    </form>
+                </div>
+
+                <div class="step-contact">
+                    <h2>Step 2: Enter Name</h2>
+                    <form id="nameForm" style="display: none;">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <br>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <button type="button" onclick="submitName()">Next</button>
+                    </form>
+                </div>
+
+                <div class="step-contact">
+                    <h2>Step 3: Send Template</h2>
+                    <form id="templateForm" style="display: none;" action="/submit" method="post">
+                        <!-- Template box colored #f8b54e -->
+                        <div class="template-box-contact" style="background-color: #f8b54e;">
+                            <!-- Placeholder for the template -->
+                            <p id="templateText">Dear MP Name,\n\nI am writing to you today as a concerned member of [Your Electorate] about the pressing issue of income support payments in Australia. Specifically, I seek your support for the necessary and overdue increase of daily income support from $54 to at least $76.\n\nAs a pivotal figure in the government, your endorsement and action can significantly impact the lives of countless Australians who rely on income support to meet their basic needs. This proposed increase is not just about numbers; it's about ensuring dignity, security, and a fair chance for all citizens to contribute to our community and economy.\n\nThe current rate of $54 per day falls significantly short of providing for the basic needs of individuals and families, especially considering the rising cost of living. This situation not only affects the immediate well-being of those on income support but also has long-term detrimental effects on social cohesion, economic participation, and public health.\n\nAn increase to $76 per day aligns more closely with the real cost of living and represents a step towards a more equitable and inclusive society. It reflects a commitment to supporting the most vulnerable among us, fostering a culture of care and mutual respect.\n\nMoreover, this adjustment is not just beneficial for recipients but for the broader Australian economy. Evidence consistently shows that adequate income support stimulates local economies through increased spending, supports mental and physical health, and reduces the strain on social services by preventing crises before they occur.\n\nI urge you to champion this vital cause by:\n\nPublicly endorsing the increase of daily income support to at least $76.\nAdvocating within your capacity for the allocation of necessary funds in the upcoming budget.\nSupporting legislative changes that ensure income support rates are periodically adjusted to reflect the real cost of living.\nAs my representative, I implore you to take a stand on this critical issue. The well-being of countless Australians rests upon the willingness of our leaders to champion the cause of increased and equitable income support. We are at a pivotal moment where decisive action can significantly alter the trajectory for many. I ask for your commitment to advocating for meaningful reforms that ensure no Australian is left behind due to inadequate income support.\n\nYours faithfully,\n\nYour Name</p>
+                        </div>
+
+                        <!-- Hidden inputs to store data -->
+                        <input type="hidden" id="finalPostcode" name="postcode">
+                        <input type="hidden" id="finalFirstName" name="firstName">
+                        <input type="hidden" id="finalLastName" name="lastName">
+                        <p id="emailParagraph" style="display: none;">Please send the filled-in template to : <span id="mpEmail"></span></p>
+
+                        <button type="submit" onclick="showEmailParaghraph()">Submit</button>
+                    </form>    
+                </div>
+            </div>
+        </div>
+
+        <div class="template-container-contact">
+            <div class="template-box-contact" style="background-color: #f8b54e;">
+                <p id="templateText">
+                Dear [INSERT MP NAME],
+                I am writing to you today as a concerned member of [Your Electorate] about the pressing issue of income support payments in Australia. Specifically, I seek your support for the necessary and overdue increase of daily income support from $54 to at least $76. 
+                
+                As a pivotal figure in the government, your endorsement and action can significantly impact the lives of countless Australians who rely on income support to meet their basic needs. This proposed increase is not just about numbers; it's about ensuring dignity, security, and a fair chance for all citizens to contribute to our community and economy. 
+                The current rate of $54 per day falls significantly short of providing for the basic needs of individuals and families, especially considering the rising cost of living. This situation not only affects the immediate well-being of those on income support but also has long-term detrimental effects on social cohesion, economic participation, and public health.
+                An increase to $76 per day aligns more closely with the real cost of living and represents a step towards a more equitable and inclusive society. It reflects a commitment to supporting the most vulnerable among us, fostering a culture of care and mutual respect. 
+                Moreover, this adjustment is not just beneficial for recipients but for the broader Australian economy. Evidence consistently shows that adequate income support stimulates local economies through increased spending, supports mental and physical health, and reduces the strain on social services by preventing crises before they occur.
+                
+                I urge you to champion this vital cause by 
+                <ul>
+                <li>Publicly endorsing the increase of daily income support to at least $76.</li>
+                <li>Advocating within your capacity for the allocation of necessary funds in the upcoming budget.</li>
+                <li>Supporting legislative changes that ensure income support rates are periodically adjusted to reflect the real cost of living.</li>
+                </ul>
+                As my representative, I implore you to take a stand on this critical issue. The well-being of countless Australians rests upon the willingness of our leaders to champion the cause of increased and equitable income support. We are at a pivotal moment where decisive action can significantly alter the trajectory for many. I ask for your commitment to advocating for meaningful reforms that ensure no Australian is left behind due to inadequate income support.
+                Yours faithfully,
+                    
+                [Your Name]   
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src='contact.js'></script>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="pictures/facebook.png" alt="Facebook"></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src="pictures/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="pictures/instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="share-option">
+            <button onclick="sharePage()">Share</button>
+        </div>
+    </footer>
+    
+</body>
+    
+</html>

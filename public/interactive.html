@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fair Income</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header>
+    <img src="pictures/Logo.png" alt="Logo" class="logo">
+    <div class="dropdown">
+        <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="learn-more.html">Learn more</a>
+            <a href="about-us.html">About us</a>
+            <a href="act.html">Act Now</a>
+            <a href="resource.html">Further Resources</a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container-interactive">
+        <h1>Interactive Budgeting</h1>
+        <div class="round" id="round1">
+            <h2>Round 1: Monthly Budget Allocation</h2>
+            <p>Objective: Distribute your limited income across essential expenses.</p>
+            <label>
+                <input type="radio" name="round1" id="nextRound1" value="A">
+                Option A: Spend more on housing to ensure a safer neighborhood, leaving less for other expenses.
+            </label>
+            <label>
+                <input type="radio" name="round1" id="nextRound1" value="B">
+                Option B: Allocate more to savings, cutting back on immediate needs like food and utilities.
+            </label>
+            <label>
+                <input type="radio" name="round1" id="nextRound1" value="C">
+                Option C: Balance spending evenly, but with no room for savings or unexpected costs.
+            </label>
+        </div>
+
+        <div class="round" id="round2">
+            <h2>Round 2: Unexpected Medical Bill</h2>
+            <p>Objective: You're faced with a sudden medical bill. How do you adjust?</p>
+            <label>
+                <input type="radio" name="round2" id="nextRound2" value="A">
+                Option A: Ignore the bill, hoping it won’t affect your credit score.
+            </label>
+            <label>
+                <input type="radio" name="round2" id="nextRound2" value="B">
+                Option B: Pay the bill by skipping next month's rent payment.
+            </label>
+            <label>
+                <input type="radio" name="round2" id="nextRound2" value="C">
+                Option C: Take out a high-interest loan to cover the bill.
+            </label>
+        </div>
+
+        <div class="round" id="round3">
+            <h2>Round 3: Car Repair Needed</h2>
+            <p>Objective: Your car breaks down and is essential for your job. What's your move?</p>
+            <label>
+                <input type="radio" name="round3" id="nextRound3" value="A">
+                Option A: Fix the car using your rent money, risking housing security.
+            </label>
+            <label>
+                <input type="radio" name="round3" id="nextRound3" value="B">
+                Option B: Use public transport, resulting in lost work hours and reduced income.
+            </label>
+            <label>
+                <input type="radio" name="round3" id="nextRound3" value="C">
+                Option C: Borrow money from a friend, straining personal relationships.
+            </label>
+        </div>
+
+        <div class="round" id="round4">
+            <h2>Round 4: Winter Heating Costs Rise</h2>
+            <p>Objective: With an increase in heating costs, how do you manage?</p>
+            <label>
+                <input type="radio" name="round4" id="nextRound4" value="A">
+                Option A: Reduce heating usage, risking health issues due to cold.
+            </label>
+            <label>
+                <input type="radio" name="round4" id="nextRound4" value="B">
+                Option B: Pay for heating, cutting back significantly on groceries.
+            </label>
+            <label>
+                <input type="radio" name="round4" id="nextRound4" value="C">
+                Option C: Skip other bills to afford heating, accumulating debt.
+            </label>
+        </div>
+
+        <div class="final-outcome" id="finalOutcome">
+            <h2>Final Outcome Based on Choices:</h2>
+            <!-- The outcome messages will be displayed here based on user choices -->
+        </div>
+
+        <button id="showOutcome">Show Outcome</button>
+    </div>
+
+    <script src="interactive.js"></script>
+</body>
+
+</html>
